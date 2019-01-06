@@ -5,6 +5,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class Controller
 {
     @FXML
@@ -15,9 +18,19 @@ public class Controller
     Button yellow;
     @FXML
     Button green;
+
+    Timer timer = new Timer();
+    TimerTask task = new TimerTask() {
+        @Override
+        public void run() {
+            blue.setOpacity(1);
+        }
+    };
+
     public void bluePress()
     {
         blue.setOpacity(0.5);
+        timer.scheduleAtFixedRate(task,500,500);
     }
     public void redPress()
     {
