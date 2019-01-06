@@ -7,14 +7,28 @@ import javafx.scene.control.Button;
 
 public class Controller
 {
-    /*@FXML
+    @FXML
     Button blue;
-    public void pressButton() {
-        blue.setOpacity(0.5);
-    }*/
-
-    public void pressButton(ActionEvent event)
+    @FXML
+    Button red;
+    @FXML
+    Button yellow;
+    @FXML
+    Button green;
+    public void bluePress()
     {
-        System.out.println("Hello World");
+        blue.setOpacity(0.5);
+    }
+    public void redPress()
+    {
+        red.setOpacity(0.5);
+    }
+    public void yellowPress()
+    {
+        yellow.setOpacity(0.5);
+    }
+    public void greenPress()
+    {
+        green.setOpacity(0.5);
     }
 }
