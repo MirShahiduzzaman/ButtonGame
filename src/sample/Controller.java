@@ -23,26 +23,26 @@ public class Controller
 
     public void bluePress()
     {
-        blue.setOpacity(0.5);
-        buttonTimer.scheduleAtFixedRate(createNewTask(blue),500,500);
+        blue.setOpacity(1);
+        buttonTimer.scheduleAtFixedRate(createNewTask(blue),1000,1000);
     }
     public void redPress()
     {
-        red.setOpacity(0.5);
-        buttonTimer.scheduleAtFixedRate(createNewTask(red),500,500);
+        red.setOpacity(1);
+        buttonTimer.scheduleAtFixedRate(createNewTask(red),1000,1000);
     }
     public void yellowPress()
     {
-        yellow.setOpacity(0.5);
-        buttonTimer.scheduleAtFixedRate(createNewTask(yellow),500,500);
+        yellow.setOpacity(1);
+        buttonTimer.scheduleAtFixedRate(createNewTask(yellow),1000,1000);
     }
     public void greenPress()
     {
-        green.setOpacity(0.5);
-        buttonTimer.scheduleAtFixedRate(createNewTask(green),500,500);
+        green.setOpacity(1);
+        buttonTimer.scheduleAtFixedRate(createNewTask(green),1000,1000);
     }
 
-    /** Afaq Anwar
+    /**
      * Generates a TimerTask to set the opacity to 1 for a specified Button.
      *      TimerTasks cannot be reused, thus the creation of a new TimerTask is needed.
      *      A more elegant solution would be to use a SequentialTransition with a FillTransition.
@@ -53,7 +53,7 @@ public class Controller
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                button.setOpacity(1);
+                button.setOpacity(0.25);
             }
         };
         return task;
