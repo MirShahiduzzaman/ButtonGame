@@ -6,7 +6,7 @@ import java.io.IOException;
 public class CSVWriter {
     public static void main(String[] args)
     {
-        generateCsvFile("test1.csv");
+        generateCsvFile("test.csv");
     }
 
     private static void generateCsvFile(String sFileName)
@@ -30,7 +30,6 @@ public class CSVWriter {
             writer.append("Marian");
             writer.append(",");
             writer.append("29");
-            writer.append("\n");
 
             //can still generate any data u want
             writer.flush();
